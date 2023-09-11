@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from './navigatio.module.css'
 
 const link = [
   {
@@ -13,8 +14,8 @@ const link = [
 
 export default function Navigation () {
   return (
-    <header>
-      <nav>
+    <header className={styles.header}>
+      <nav className={styles.navigation}>
         <ul>
           {link.map((item) => (
             <li key={item.label}>
