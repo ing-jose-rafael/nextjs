@@ -6,12 +6,9 @@
 .navigation{
   display: flex;
   list-style: none;
-<<<<<<< HEAD
-=======
   gap: 32px;
 }
 .navigation a:hover{
   color: #f0f;
   text-decoration: underline;
->>>>>>> 26bee3e (estilos globales y de componentes)
 }
