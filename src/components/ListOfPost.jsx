@@ -2,7 +2,20 @@ import Link from 'next/link'
 import LikeButton from './LikeButton'
 
 const fetchPost = () => {
-  return fetch('https://jsonplaceholder.typicode.com/posts/')
+  // getStaticProps
+  // return fetch('https://jsonplaceholder.typicode.com/posts/')
+  //   .then(response => response.json())
+
+  // getServerSideProps
+  // return fetch('https://jsonplaceholder.typicode.com/posts/', {cache: 'no-cache'})
+  //   .then(response => response.json())
+
+  // ingremental static regeneration
+  return fetch('https://jsonplaceholder.typicode.com/posts/', {
+    next: {
+      revalidate: 60 // cada 60 minutos se genera una nueva petición
+    }
+  })
     .then(response => response.json())
 }
 export default async function ListOfPosts () {
