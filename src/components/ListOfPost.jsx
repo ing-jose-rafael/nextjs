@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LikeButton from './LikeButton'
 
 const fetchPost = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts/')
@@ -13,6 +14,7 @@ export default async function ListOfPosts () {
           <h2 className='font-bold text-[#ff81ff] hover:text-[#f0f]'>{post.title}</h2>
         </Link>
         <p>{post.body}</p>
+        <LikeButton />
         <br />
       </article>
     ))
