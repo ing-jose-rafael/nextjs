@@ -10,12 +10,12 @@ export default async function ListOfPosts () {
   return (
     posts.slice(0, 5).map(post => (
       <article key={post.id}>
-        <Link href={`/post/${post.id}`}>
+        <Link href={`/posts/${post.id}`}>
           <h2 className='font-bold text-[#ff81ff] hover:text-[#f0f]'>{post.title}</h2>
+          <p>{post.body}</p>
+          <LikeButton />
+          <br />
         </Link>
-        <p>{post.body}</p>
-        <LikeButton />
-        <br />
       </article>
     ))
   )
