@@ -9,6 +9,10 @@ const link = [
   {
     label: 'About',
     route: '/about'
+  },
+  {
+    label: 'Posts',
+    route: '/posts'
   }
 ]
 
