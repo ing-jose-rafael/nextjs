@@ -15,8 +15,8 @@ const link = [
 export default function Navigation () {
   return (
     <header className={styles.header}>
-      <nav className={styles.navigation}>
-        <ul>
+      <nav>
+        <ul className={styles.navigation}>
           {link.map((item) => (
             <li key={item.label}>
               <Link href={item.route}>{item.label}</Link>
