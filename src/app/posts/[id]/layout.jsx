@@ -14,9 +14,9 @@ export default async function Post ({ children, params }) {
       <h1 className='font-bold text-[#ff81ff]'>{post.title}</h1>
       <p className='text-justify'>{post.body}</p>
       <LikeButton />
-      <Link href={`${id}/comments`} className='block'>Ver Comentarios...</Link>
-      <br />
+      {/* <Link href={`${id}/comments`} className='block'>Ver Comentarios...</Link> */}
       {children}
+      <br />
       <Link href='/posts'>
         Back to posts
       </Link>
