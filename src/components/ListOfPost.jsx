@@ -25,7 +25,7 @@ export default async function ListOfPosts () {
       <article key={post.id}>
         <Link href={`/posts/${post.id}`}>
           <h2 className='font-bold text-[#ff81ff] hover:text-[#f0f]'>{post.title}</h2>
-          <p>{post.body}</p>
+          <p className='text-justify'>{post.body}</p>
           <LikeButton />
           <br />
         </Link>
