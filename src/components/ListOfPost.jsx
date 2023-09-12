@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import LikeButton from './LikeButton'
+import { spaceGrotesk } from '@/fonts'
 
 const fetchPost = () => {
   // getStaticProps
@@ -22,7 +23,7 @@ export default async function ListOfPosts () {
   const posts = await fetchPost()
   return (
     posts.slice(0, 5).map(post => (
-      <article key={post.id}>
+      <article key={post.id} className={spaceGrotesk.className}>
         <Link href={`/posts/${post.id}`}>
           <h2 className='font-bold text-[#ff81ff] hover:text-[#f0f]'>{post.title}</h2>
           <p className='text-justify'>{post.body}</p>
